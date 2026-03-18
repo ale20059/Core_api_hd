@@ -6,7 +6,7 @@ use App\Http\Controllers\Api\Auth\ProductAuthController;
 use App\Http\Controllers\Api\v1\BiographyController;
 use App\Http\Controllers\Api\v1\ContactoController;
 use App\Http\Controllers\Api\v1\ProductController;
-use App\Http\Controllers\Api\v1\StudentController;
+use App\Http\Controllers\Api\Academy\StudentsController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -56,7 +56,7 @@ Route::prefix('v1')->group(function () {
     Route::post('/contact', [ContactoController::class, 'store']);
 
 
-    Route::post('/student/auth/login', [StudentController::class, 'Login']);
-    Route::post('/student/auth/register', [StudentController::class, 'Register']);
-    Route::get('/student/auth/me', [StudentController::class, 'me'])->middleware('auth:student');
+    Route::post('/student/auth/login', [StudentsController::class, 'Login']);
+    Route::post('/student/auth/register', [StudentsController::class, 'Register']);
+    Route::get('/student/auth/me', [StudentsController::class, 'me'])->middleware('auth:student');
 });

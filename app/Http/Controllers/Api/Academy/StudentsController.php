@@ -1,15 +1,15 @@
 <?php
 
-namespace App\Http\Controllers\Api\v1;
+namespace App\Http\Controllers\Api\Academy;
 
 use App\Http\Controllers\Controller;
 use App\Models\Student;
-use Illuminate\Auth\Events\Validated;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
-class StudentController extends Controller
+class StudentsController extends Controller
 {
+    //
     public function Login(Request $request)
     {
         $request->validate([
