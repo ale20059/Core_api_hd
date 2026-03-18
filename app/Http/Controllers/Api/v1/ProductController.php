@@ -59,6 +59,9 @@ class ProductController extends Controller
 
         $friendlyname = $product->slug . '.' . $extension;
 
-        return Storage::disk('local')->download($product->download_path, $friendlyname);
+        return response()->download(
+            Storage::disk('local')->path($product->download_path),
+            $friendlyname
+        );
     }
 }

@@ -68,9 +68,9 @@ class ProductAuthController extends Controller
             'on_sale' => 'nullable|boolean',
             'is_free' => 'nullable|boolean',
             'description' => 'required|string',
-            'cover_image' => 'required|image|max:10240', // 10MB para la portada
-            'demo_audio' => 'nullable|file|max:51200',   // 50MB para el demo
-            'main_file' => 'nullable|file|max:2048000',  // 2GB para el archivo real (ZIP/Video)
+            'cover_image' => 'required|image|max:10240',
+            'demo_audio' => 'nullable|file|max:51200',
+            'main_file' => 'nullable|file|max:2048000',
             'is_live' => 'nullable|boolean',
             'event_date' => 'nullable|date',
             'video_embed_code' => 'nullable|string',
